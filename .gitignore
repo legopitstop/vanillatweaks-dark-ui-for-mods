@@ -1,5 +1,6 @@
 dist
 cache
+libs
 .env
 .venv
 *.log
