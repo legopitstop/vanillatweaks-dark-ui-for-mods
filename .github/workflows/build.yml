@@ -43,9 +43,8 @@ jobs:
         run: python build.py
 
       - name: Create a Release
-        uses: elgohr/Github-Release-Action@v5
+        uses: softprops/action-gh-release@v2
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          title: Resource Pack
-          workdir: dist
+          files: dist
