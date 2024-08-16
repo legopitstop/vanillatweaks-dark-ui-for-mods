@@ -3,19 +3,12 @@ import os
 import modrinth
 import requests
 import logging
-import dotenv
 import zipfile
 import io
 import fnmatch
 import shutil
 import sys
 from PIL import Image, ImageColor  # Use pillow-simd
-
-# Use cupy for GPU
-try:
-    import cupy as np
-except ImportError:
-    import numpy as np
 
 logging.basicConfig(
     format="[%(asctime)s] [%(name)s/%(levelname)s]: %(message)s",
@@ -28,8 +21,11 @@ logging.basicConfig(
 )
 
 try:
+    import dotenv
     dotenv.load_dotenv()
-except:
+except ImportError:
+    ...
+except Exception:
     logging.warn("Failed to load .env file.")
 
 
