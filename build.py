@@ -112,6 +112,10 @@ def main():
     modpackstxt = []
     modstxt = []
 
+    # Load mcmeta
+    with open('src/pack.mcmeta') as fd:
+        mcmeta = json.load(fd)
+
     # Setup dist from src
     shutil.copytree("src", "dist", dirs_exist_ok=True)
 
@@ -187,6 +191,9 @@ def main():
         )
         fd.write(contents)
 
+    # Archive dist
+    version = '.'.join([str(x) for x in mcmeta['pack']['version']])
+    shutil.make_archive('libs/Resource Pack-'+version, 'zip', 'dist')
 
 if __name__ == "__main__":
     main()
