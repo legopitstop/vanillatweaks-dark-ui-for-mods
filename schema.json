@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Config",
+  "description": "Config for vanilla tweaks dark UI for mods.",
+  "type": "object",
+  "properties": {
+    "colors": {
+      "description": "A mapping of colors. <old color>: <new color>",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "format": "color"
+      }
+    },
+    "modpacks": {
+      "description": "List of modpacks to download textures from",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "projectID", "fileID"],
+        "properties": {
+          "name": {
+            "description": "The name of this modpack",
+            "type": "string"
+          },
+          "type": {
+            "description": "The source that this modpack is from",
+            "enumDescriptions": ["https://modrinth.com/modpacks"],
+            "enum": ["modrinth"]
+          },
+          "projectID": {
+            "description": "The modpack ID",
+            "type": "string"
+          },
+          "fileID": {
+            "description": "The version ID",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "mods": {
+      "description": "List of mods to download textures from",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "projectID", "fileID"],
+        "properties": {
+          "name": {
+            "description": "The name of this mod",
+            "type": "string"
+          },
+          "type": {
+            "description": "The source that this mod is from",
+            "enumDescriptions": ["https://modrinth.com/mods"],
+            "enum": ["modrinth"]
+          },
+          "projectID": {
+            "description": "The mod ID",
+            "type": "string"
+          },
+          "fileID": {
+            "description": "The version ID",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

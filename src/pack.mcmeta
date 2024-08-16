@@ -1,6 +1,26 @@
 {
   "pack": {
     "pack_format": 6,
-    "description": "Vanilla Tweaks 1.14\n§r§6xisumavoid.com/vanillatweaks"
+    "supported_formats": {
+      "min_inclusive": 6,
+      "max_inclusive": 34
+    },
+    "version": [1, 4, 0],
+    "description": [
+      {
+        "text": "Dark UI for mods! ",
+        "color": "gray"
+      },
+      {
+        "text": "Legopitstop",
+        "color": "#ff8800",
+        "underlined": true
+      }
+    ],
+    "metadata": {
+      "authors": ["Legopitstop"],
+      "license": "https://license.lpsmods.dev",
+      "url": "https://lpsmods.dev/"
+    }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "colors": {
+    "#FFFFFF": "#878787",
+    "#C6C6C6": "#535353",
+    "#C7C7C7": "#535353",
+    "#555555": "#333333",
+    "#8B8B8B": "#333333",
+    "#8C8C8C": "#333333"
+  },
+  "modpacks": [],
+  "mods": [
+    {
+      "name": "Just Enough Items",
+      "type": "modrinth",
+      "projectID": "u6dRKJwZ",
+      "fileID": "W0SHO1U5"
+    }
+  ]
+}

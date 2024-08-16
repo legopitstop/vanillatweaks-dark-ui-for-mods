@@ -1,0 +1,4 @@
+modrinth==0.1.5
+pillow==10.4.0
+python-dotenv==0.0.5
+numpy==2.0.1
